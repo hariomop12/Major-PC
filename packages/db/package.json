@@ -1,0 +1,37 @@
+{
+	"name": "@clearrouter/db",
+	"version": "1.0.0",
+	"private": true,
+	"license": "SEE LICENSE IN ../../LICENSE",
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
+		}
+	},
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist/"
+	],
+	"scripts": {
+		"build": "tsc && tsup src/index.ts",
+		"migrate": "drizzle-kit migrate",
+		"push": "drizzle-kit push",
+		"reset": "tsx ./reset.ts",
+		"seed": "tsx ./seed.ts"
+	},
+	"dependencies": {
+		"@clearrouter/logger": "workspace:*",
+		"drizzle-orm": "^0.29.3"
+	},
+	"devDependencies": {
+		"@types/pg": "^8.10.9",
+		"dotenv": "^16.5.0",
+		"drizzle-kit": "^0.20.18",
+		"pg": "^8.16.3"
+	}
+}

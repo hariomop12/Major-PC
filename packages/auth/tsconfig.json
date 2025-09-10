@@ -1,0 +1,9 @@
+{
+	"extends": "../../tsconfig.json",
+	"compilerOptions": {
+		"paths": {
+			"@zz/*": ["../../packages/*/src"]
+		}
+	},
+	"include": ["./src/**/*.ts"]
+}
